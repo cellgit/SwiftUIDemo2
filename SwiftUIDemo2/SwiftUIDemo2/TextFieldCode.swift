@@ -12,32 +12,45 @@ struct TextFieldCode: View {
     @Binding var code: String
 
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack(alignment: .center, spacing: 8) {
-                Image("phone")
-                HStack(alignment: .center, spacing: 10) {
-                    VStack(alignment: .leading) {
-                        Text("验证码")
-                            .frame(alignment: .leading)
-                            .font(Font.system(size: 13, weight: .regular, design: .rounded))
-                            .foregroundColor(Color(hex: Colors.text.value))
+        
+            VStack(alignment: .trailing) {
+                HStack(alignment: .center, spacing: 8) {
+                    Image("phone")
+                    HStack(alignment: .center, spacing: 10) {
+                        VStack(alignment: .leading) {
+                            Text("验证码")
+                                .frame(alignment: .leading)
+                                .font(Font.system(size: 13, weight: .regular, design: .rounded))
+                                .foregroundColor(Color(hex: Colors.text.value))
+                                .background(.red)
+                            TextField("请输入验证码", text: $code)
+//                                .frame(width: 120, height: 44, alignment: .leading)
+                                .keyboardType(.numberPad)
+                                .font(Font.system(size: 13, weight: .medium, design: .rounded))
+//                                .border(Color.gray, width: 1)
+//                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                        }
+                        
+                        
+                        
+                        
+                        
+                    }
+                    Spacer()
+                    VStack(alignment: .trailing, spacing: 0) {
+                        CountdownTimerView(countdownDuration: 10)
                             .background(.red)
-                        TextField("请输入验证码", text: $code)
-                            .frame(width: 100, height: 44, alignment: .leading)
-                            .keyboardType(.numberPad)
-                            .font(Font.system(size: 13, weight: .medium, design: .rounded))
-                            .border(Color.gray, width: 1)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     
-                    CountdownTimerView(countdownDuration: 10)
-                        .background(.red)
-                        
+                    //                CountdownTimerView(countdownDuration: 10)
+                    //                    .background(.red)
                 }
+                
+                
+                
             }
+            //        .background(.cyan)
             
-        }
-//        .background(.cyan)
         
     }
     
