@@ -14,6 +14,10 @@
 		CE0E46792AFA840C0080EAAB /* SwiftUIDemo2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46782AFA840C0080EAAB /* SwiftUIDemo2Tests.swift */; };
 		CE0E46832AFA840C0080EAAB /* SwiftUIDemo2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46822AFA840C0080EAAB /* SwiftUIDemo2UITests.swift */; };
 		CE0E46852AFA840C0080EAAB /* SwiftUIDemo2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46842AFA840C0080EAAB /* SwiftUIDemo2UITestsLaunchTests.swift */; };
+		CE1297522AFB2F0400333495 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1297512AFB2F0400333495 /* ColorUtils.swift */; };
+		CE798B762AFB68C200530A8C /* TextFieldPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B752AFB68C200530A8C /* TextFieldPhone.swift */; };
+		CE798B792AFB895700530A8C /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B782AFB895700530A8C /* CountdownTimerView.swift */; };
+		CE798B7B2AFB94C400530A8C /* TextFieldCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B7A2AFB94C400530A8C /* TextFieldCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		CE0E467E2AFA840C0080EAAB /* SwiftUIDemo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDemo2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0E46822AFA840C0080EAAB /* SwiftUIDemo2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemo2UITests.swift; sourceTree = "<group>"; };
 		CE0E46842AFA840C0080EAAB /* SwiftUIDemo2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemo2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE1297512AFB2F0400333495 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		CE798B752AFB68C200530A8C /* TextFieldPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPhone.swift; sourceTree = "<group>"; };
+		CE798B782AFB895700530A8C /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
+		CE798B7A2AFB94C400530A8C /* TextFieldCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 			children = (
 				CE0E46662AFA840A0080EAAB /* SwiftUIDemo2App.swift */,
 				CE0E46682AFA840A0080EAAB /* ContentView.swift */,
+				CE798B752AFB68C200530A8C /* TextFieldPhone.swift */,
+				CE798B7A2AFB94C400530A8C /* TextFieldCode.swift */,
+				CE798B772AFB893E00530A8C /* components */,
+				CE1297502AFB2EDE00333495 /* utils */,
 				CE0E466A2AFA840B0080EAAB /* Assets.xcassets */,
 				CE0E466C2AFA840B0080EAAB /* SwiftUIDemo2.entitlements */,
 				CE0E466D2AFA840B0080EAAB /* Preview Content */,
@@ -127,6 +139,22 @@
 				CE0E46842AFA840C0080EAAB /* SwiftUIDemo2UITestsLaunchTests.swift */,
 			);
 			path = SwiftUIDemo2UITests;
+			sourceTree = "<group>";
+		};
+		CE1297502AFB2EDE00333495 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE1297512AFB2F0400333495 /* ColorUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		CE798B772AFB893E00530A8C /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CE798B782AFB895700530A8C /* CountdownTimerView.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1297522AFB2F0400333495 /* ColorUtils.swift in Sources */,
 				CE0E46692AFA840A0080EAAB /* ContentView.swift in Sources */,
+				CE798B7B2AFB94C400530A8C /* TextFieldCode.swift in Sources */,
+				CE798B762AFB68C200530A8C /* TextFieldPhone.swift in Sources */,
 				CE0E46672AFA840A0080EAAB /* SwiftUIDemo2App.swift in Sources */,
+				CE798B792AFB895700530A8C /* CountdownTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
