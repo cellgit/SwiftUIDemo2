@@ -39,7 +39,7 @@ struct CountdownTimerView: View {
                         .foregroundColor(.blue)
                         .font(Font.system(size: 13, weight: .regular))
 //                        .padding()
-                        .background(.cyan)
+//                        .background(.cyan)
                         
                 }
             }

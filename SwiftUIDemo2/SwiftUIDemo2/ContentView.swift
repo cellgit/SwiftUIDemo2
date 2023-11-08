@@ -7,39 +7,6 @@
 
 import SwiftUI
 
-//struct ContentView: View {
-//    var body: some View {
-//        VStack {
-//            Button(action: {
-//                // 按钮点击事件
-//                print("按钮被点击")
-//            }) {
-//                Text("按钮")
-//                    .font(.title)
-//                    .foregroundColor(.white)
-//                    .padding()
-//                    .background(Color.blue)
-//                    .cornerRadius(10)
-//            }
-//
-//            Text("这是一个文本")
-//                .font(.headline)
-//                .padding()
-//        }
-//
-//        .background(Color.gray)
-//    }
-//}
-//
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
-
-
-import SwiftUI
-
 struct ContainerView: View {
     @State private var phoneNumber: String = ""
     @State private var code: String = ""
@@ -52,37 +19,38 @@ struct ContainerView: View {
     var body: some View {
         
         GeometryReader { geometry in
-            VStack(alignment: .center, spacing: 0) {
-                VStack {
-                    TextFieldPhone(phoneNumber: $phoneNumber)
-                        .padding(30)
+            ScrollView{
+                VStack(alignment: .center, spacing: 0) {
+                    VStack {
+                        TextFieldPhone(phoneNumber: $phoneNumber)
+                            .padding(30)
+                    }
+                    .frame(width: geometry.size.width-32, alignment: .center)
+                    .background(Color(hex: Colors.secondaryGray.value))
+                    .clipShape(RoundedCorner(radius: topLeftRadius,
+                                             topRight: topRightRadius,
+                                             bottomLeft: bottomLeftRadius,
+                                             bottomRight: bottomRightRadius))
+                    .padding(EdgeInsets.init(top: 100, leading: 16, bottom: 0, trailing: 16))
+                    
+                    VStack {
+                        TextFieldCode(code: $code)
+                            .padding(30)
+                    }
+                    .frame(width: geometry.size.width-32, alignment: .leading)
+                    .background(Color(hex: Colors.secondaryGray.value))
+                    .clipShape(RoundedCorner(radius: 8,
+                                             topRight: 8,
+                                             bottomLeft: 24,
+                                             bottomRight: 24))
+                    .padding(EdgeInsets.init(top: 4, leading: 16, bottom: 0, trailing: 16))
+                    
                 }
-                .frame(width: geometry.size.width-32, alignment: .center)
-                .background(Color(hex: Colors.secondaryGray.value))
-                .clipShape(RoundedCorner(radius: topLeftRadius,
-                                        topRight: topRightRadius,
-                                        bottomLeft: bottomLeftRadius,
-                                        bottomRight: bottomRightRadius))
-                .padding(EdgeInsets.init(top: 100, leading: 16, bottom: 0, trailing: 16))
+                .padding(EdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                //            .background(Color(.gray))
                 
-                VStack {
-                    TextFieldCode(code: $code)
-                        .padding(30)
-                }
-                .frame(width: geometry.size.width-32, alignment: .leading)
-                .background(Color(hex: Colors.secondaryGray.value))
-                .clipShape(RoundedCorner(radius: 8,
-                                        topRight: 8,
-                                        bottomLeft: 24,
-                                        bottomRight: 24))
-                .padding(EdgeInsets.init(top: 4, leading: 16, bottom: 0, trailing: 16))
                 
             }
-            .padding(EdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-//            .background(Color(.gray))
-            
-            
-            
         }
         
         

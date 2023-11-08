@@ -22,9 +22,7 @@ struct TextFieldCode: View {
                                 .frame(alignment: .leading)
                                 .font(Font.system(size: 13, weight: .regular, design: .rounded))
                                 .foregroundColor(Color(hex: Colors.text.value))
-                                .background(.red)
                             TextField("请输入验证码", text: $code)
-//                                .frame(width: 120, height: 44, alignment: .leading)
                                 .keyboardType(.numberPad)
                                 .font(Font.system(size: 13, weight: .medium, design: .rounded))
 //                                .border(Color.gray, width: 1)
@@ -39,17 +37,12 @@ struct TextFieldCode: View {
                     Spacer()
                     VStack(alignment: .trailing, spacing: 0) {
                         CountdownTimerView(countdownDuration: 10)
-                            .background(.red)
                     }
-                    
-                    //                CountdownTimerView(countdownDuration: 10)
-                    //                    .background(.red)
                 }
                 
                 
                 
             }
-            //        .background(.cyan)
             
         
     }
