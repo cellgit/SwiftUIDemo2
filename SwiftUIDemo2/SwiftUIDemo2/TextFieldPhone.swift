@@ -16,21 +16,23 @@ struct TextFieldPhone: View {
             HStack(alignment: .center, spacing: 8) {
                 Image("phone")
                 VStack(alignment: .leading) {
-                        Text("手机号")
-                            .frame(alignment: .leading)
-                            .font(Font.system(size: 13, weight: .regular, design: .rounded))
-                            .foregroundColor(Color(hex: Colors.text.value))
-//                            .background(.red)
-                        TextField("请输入手机号", text: $phoneNumber)
-                            .keyboardType(.numberPad)
-                            .font(Font.system(size: 13, weight: .medium, design: .rounded))
-//                            .border(Color.gray, width: 1)
-//                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Text("手机号")
+                        .frame(alignment: .leading)
+                        .font(Font.system(size: 13, weight: .regular, design: .rounded))
+                        .foregroundColor(Color(hex: Colors.text.value))
+                    //                            .background(.red)
+                    TextField("请输入手机号", text: $phoneNumber)
+                        .frame(height: 38)
+//                        .border(.gray, width: 1)
+                        .keyboardType(.numberPad)
+                        .font(Font.system(size: 13, weight: .medium, design: .rounded))
+                    //                            .border(Color.gray, width: 1)
+                    //                            .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
             }
             
         }
-//        .background(.cyan)
+        //        .background(.cyan)
         
     }
     

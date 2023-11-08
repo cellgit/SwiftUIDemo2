@@ -23,6 +23,8 @@ struct TextFieldCode: View {
                                 .font(Font.system(size: 13, weight: .regular, design: .rounded))
                                 .foregroundColor(Color(hex: Colors.text.value))
                             TextField("请输入验证码", text: $code)
+                                .frame(height: 38)
+//                                .border(.gray, width: 1)
                                 .keyboardType(.numberPad)
                                 .font(Font.system(size: 13, weight: .medium, design: .rounded))
 //                                .border(Color.gray, width: 1)
