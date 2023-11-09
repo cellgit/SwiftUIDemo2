@@ -15,7 +15,7 @@ struct TextFieldCode: View {
         
             VStack(alignment: .trailing) {
                 HStack(alignment: .center, spacing: 8) {
-                    Image("phone")
+                    Image("phonenumber")
                     HStack(alignment: .center, spacing: 10) {
                         VStack(alignment: .leading) {
                             Text("验证码")

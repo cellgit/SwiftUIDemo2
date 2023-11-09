@@ -20,7 +20,7 @@ struct CountdownTimerView: View {
     var body: some View {
         VStack {
             if isCountingDown {
-                Text("重新发送（\(Int(remainingTime))s）")
+                Text("重新发送 (\(Int(remainingTime))s)")
                     .lineLimit(1)
                     .foregroundColor(Color(hex: Colors.text3.value))
                     .font(Font.system(size: 13, weight: .regular))

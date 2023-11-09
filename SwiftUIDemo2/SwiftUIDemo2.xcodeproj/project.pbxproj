@@ -18,6 +18,7 @@
 		CE798B762AFB68C200530A8C /* TextFieldPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B752AFB68C200530A8C /* TextFieldPhone.swift */; };
 		CE798B792AFB895700530A8C /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B782AFB895700530A8C /* CountdownTimerView.swift */; };
 		CE798B7B2AFB94C400530A8C /* TextFieldCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B7A2AFB94C400530A8C /* TextFieldCode.swift */; };
+		CEBFCEFA2AFC7B9D00275624 /* TextFieldPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBFCEF92AFC7B9D00275624 /* TextFieldPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CE798B752AFB68C200530A8C /* TextFieldPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPhone.swift; sourceTree = "<group>"; };
 		CE798B782AFB895700530A8C /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
 		CE798B7A2AFB94C400530A8C /* TextFieldCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCode.swift; sourceTree = "<group>"; };
+		CEBFCEF92AFC7B9D00275624 /* TextFieldPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				CE0E46682AFA840A0080EAAB /* ContentView.swift */,
 				CE798B752AFB68C200530A8C /* TextFieldPhone.swift */,
 				CE798B7A2AFB94C400530A8C /* TextFieldCode.swift */,
+				CEBFCEF92AFC7B9D00275624 /* TextFieldPassword.swift */,
 				CE798B772AFB893E00530A8C /* components */,
 				CE1297502AFB2EDE00333495 /* utils */,
 				CE0E466A2AFA840B0080EAAB /* Assets.xcassets */,
@@ -221,7 +224,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					CE0E46622AFA840A0080EAAB = {
 						CreatedOnToolsVersion = 14.2;
@@ -292,6 +295,7 @@
 				CE798B7B2AFB94C400530A8C /* TextFieldCode.swift in Sources */,
 				CE798B762AFB68C200530A8C /* TextFieldPhone.swift in Sources */,
 				CE0E46672AFA840A0080EAAB /* SwiftUIDemo2App.swift in Sources */,
+				CEBFCEFA2AFC7B9D00275624 /* TextFieldPassword.swift in Sources */,
 				CE798B792AFB895700530A8C /* CountdownTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +366,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -420,6 +425,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -446,6 +452,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftUIDemo2/SwiftUIDemo2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDemo2/Preview Content\"";
 				DEVELOPMENT_TEAM = WGTAZF6C7D;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -484,6 +491,7 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftUIDemo2/SwiftUIDemo2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDemo2/Preview Content\"";
 				DEVELOPMENT_TEAM = WGTAZF6C7D;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -521,6 +529,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WGTAZF6C7D;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -544,6 +553,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WGTAZF6C7D;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -566,6 +576,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WGTAZF6C7D;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -588,6 +599,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = WGTAZF6C7D;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
