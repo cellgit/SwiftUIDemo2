@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE09C2D82AFC802800343922 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE09C2D72AFC802800343922 /* RoundedCorner.swift */; };
 		CE0E46672AFA840A0080EAAB /* SwiftUIDemo2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46662AFA840A0080EAAB /* SwiftUIDemo2App.swift */; };
 		CE0E46692AFA840A0080EAAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46682AFA840A0080EAAB /* ContentView.swift */; };
 		CE0E466B2AFA840B0080EAAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0E466A2AFA840B0080EAAB /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE09C2D72AFC802800343922 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		CE0E46632AFA840A0080EAAB /* SwiftUIDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0E46662AFA840A0080EAAB /* SwiftUIDemo2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemo2App.swift; sourceTree = "<group>"; };
 		CE0E46682AFA840A0080EAAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1297512AFB2F0400333495 /* ColorUtils.swift */,
+				CE09C2D72AFC802800343922 /* RoundedCorner.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE09C2D82AFC802800343922 /* RoundedCorner.swift in Sources */,
 				CE1297522AFB2F0400333495 /* ColorUtils.swift in Sources */,
 				CE0E46692AFA840A0080EAAB /* ContentView.swift in Sources */,
 				CE798B7B2AFB94C400530A8C /* TextFieldCode.swift in Sources */,
