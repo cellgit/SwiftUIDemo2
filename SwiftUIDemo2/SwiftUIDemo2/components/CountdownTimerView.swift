@@ -24,7 +24,6 @@ struct CountdownTimerView: View {
                     .lineLimit(1)
                     .foregroundColor(Color(hex: Colors.text3.value))
                     .font(Font.system(size: 13, weight: .regular))
-//                    .padding()
                     .onReceive(timer) { _ in
                         if remainingTime > 0 {
                             remainingTime -= 1
@@ -38,13 +37,9 @@ struct CountdownTimerView: View {
                         .lineLimit(1)
                         .foregroundColor(.blue)
                         .font(Font.system(size: 13, weight: .regular))
-//                        .padding()
-//                        .background(.cyan)
-                        
                 }
             }
         }
-//        .padding()
     }
     
     private func startCountdown() {

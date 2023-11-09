@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TextFieldPassword: View {
     
+    @Binding var password: String
     @State var isOpen: Bool = false
-    @State var password: String = ""
     
     var title: String = ""
     var placeholder: String = ""
@@ -18,18 +18,22 @@ struct TextFieldPassword: View {
     var topRight: CGFloat
     var bottomLeft: CGFloat
     var bottomRight: CGFloat
-    var onPasswordEntered: (String) -> Void
+    var callback: (String) -> Void
     
     @ViewBuilder
     var passwordField: some View {
         if isOpen {
             TextField(placeholder, text: $password) {
-                onPasswordEntered(password)
+                debugPrint("password1: \(password)")
+                callback(password)
+                
             }
         }
         else {
             SecureField(placeholder, text: $password) {
-                onPasswordEntered(password)
+                debugPrint("password2: \(password)")
+                callback(password)
+                
             }
         }
     }
@@ -44,24 +48,16 @@ struct TextFieldPassword: View {
                         .foregroundColor(Color(hex: Colors.text.value))
                     passwordField
                         .frame(height: 38)
-                        .border(.gray, width: 1)
+//                        .border(.gray, width: 1)
                         .keyboardType(.numberPad)
                         .font(Font.system(size: 13, weight: .medium, design: .rounded))
-                        .border(Color.gray, width: 1)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+//                        .border(Color.gray, width: 1)
+//                        .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 0) {
                     Button {
                         isOpen = !isOpen
-                        
-                        if isOpen {
-                            
-                        }
-                        else {
-                            
-                        }
-                        
                     } label: {
                         isOpen == true ? Image("eye_open") : Image("eye_close")
                     }
@@ -79,7 +75,7 @@ struct TextFieldPassword: View {
 
 struct TextFieldPassword_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldPassword(topLeft: 8, topRight: 8, bottomLeft: 8, bottomRight: 8) { password in
+        TextFieldPassword(password: .constant(""), topLeft: 8, topRight: 8, bottomLeft: 8, bottomRight: 8) { password in
             debugPrint("password: \(password)" )
         }
     }

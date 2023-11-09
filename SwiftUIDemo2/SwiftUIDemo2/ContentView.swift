@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ContainerView: View {
+    @State private var password: String = ""
+    @State private var passwordSecond: String = ""
     @State private var phoneNumber: String = ""
     @State private var code: String = ""
     
-    @State private var password: String = ""
     
     let topLeftRadius: CGFloat = 24
     let topRightRadius: CGFloat = 24
@@ -24,39 +25,33 @@ struct ContainerView: View {
             ScrollView{
                 VStack(alignment: .center, spacing: 0) {
                     VStack {
-                        TextFieldPhone(phoneNumber: $phoneNumber)
-                            .padding(30)
+                        TextFieldPhone(phoneNumber: $phoneNumber, topLeft: 24, topRight: 24, bottomLeft: 8, bottomRight: 8) { res in
+                            debugPrint("res: \(res)")
+                        }
                     }
-                    .frame(width: geometry.size.width-32, alignment: .center)
-                    .background(Color(hex: Colors.secondaryGray.value))
-                    .clipShape(RoundedCorner(topLeft: topLeftRadius,
-                                             topRight: topRightRadius,
-                                             bottomLeft: bottomLeftRadius,
-                                             bottomRight: bottomRightRadius))
+//                    .frame(width: geometry.size.width-32, alignment: .center)
                     .padding(EdgeInsets.init(top: 100, leading: 16, bottom: 0, trailing: 16))
                     
                     VStack {
-                        TextFieldCode(code: $code)
-                            .padding(30)
+                        TextFieldCode(code: $code, title: "验证码", placeholder: "请输入验证码", topLeft: 8, topRight: 8, bottomLeft: 24, bottomRight: 24) { res in
+                            debugPrint("res: \(res)")
+                        }
                     }
-                    .frame(width: geometry.size.width-32, alignment: .leading)
-                    .background(Color(hex: Colors.secondaryGray.value))
-                    .clipShape(RoundedCorner(topLeft: 8,
-                                             topRight: 8,
-                                             bottomLeft: 24,
-                                             bottomRight: 24))
+//                    .frame(width: geometry.size.width-32, alignment: .leading)
                     .padding(EdgeInsets.init(top: 4, leading: 16, bottom: 0, trailing: 16))
                     
                     VStack {
-                        TextFieldPassword(isOpen: false, title: "请输入密码", placeholder: "密码", topLeft: 24, topRight: 24, bottomLeft: 8, bottomRight: 8) { pwd in
+                        TextFieldPassword(password: $password, isOpen: false, title: "请输入密码", placeholder: "密码", topLeft: 24, topRight: 24, bottomLeft: 8, bottomRight: 8) { pwd in
                             debugPrint("pwd: \(pwd)")
+                            debugPrint("password3: \(password)")
+                            
                         }
                     }
                     .padding(EdgeInsets.init(top: 40, leading: 16, bottom: 0, trailing: 16))
                     
                     VStack {
-                        TextFieldPassword(isOpen: false, title: "请再次输入密码", placeholder: "再次输入密码", topLeft: 8, topRight: 8, bottomLeft: 24, bottomRight: 24) { pwd in
-                            debugPrint("pwd: \(pwd)")
+                        TextFieldPassword(password: $passwordSecond, isOpen: false, title: "请再次输入密码", placeholder: "再次输入密码", topLeft: 8, topRight: 8, bottomLeft: 24, bottomRight: 24) { pwd in
+                            debugPrint("passwordSecond4: \(passwordSecond)")
                         }
                     }
                     .padding(EdgeInsets.init(top: 4, leading: 16, bottom: 0, trailing: 16))

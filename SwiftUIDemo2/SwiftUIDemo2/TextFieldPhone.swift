@@ -10,7 +10,15 @@ import SwiftUI
 struct TextFieldPhone: View {
     
     @Binding var phoneNumber: String
-
+    
+    var title: String = "title"
+    var placeholder: String = "placeholder"
+    var topLeft: CGFloat
+    var topRight: CGFloat
+    var bottomLeft: CGFloat
+    var bottomRight: CGFloat
+    var callback: (String) -> Void
+    
     var body: some View {
         VStack(alignment: .center) {
             HStack(alignment: .center, spacing: 8) {
@@ -20,24 +28,25 @@ struct TextFieldPhone: View {
                         .frame(alignment: .leading)
                         .font(Font.system(size: 13, weight: .regular, design: .rounded))
                         .foregroundColor(Color(hex: Colors.text.value))
-                    //                            .background(.red)
                     TextField("请输入手机号", text: $phoneNumber)
                         .frame(height: 38)
 //                        .border(.gray, width: 1)
                         .keyboardType(.numberPad)
                         .font(Font.system(size: 13, weight: .medium, design: .rounded))
-                    //                            .border(Color.gray, width: 1)
-                    //                            .textFieldStyle(RoundedBorderTextFieldStyle())
+//                        .border(Color.gray, width: 1)
+//                        .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
             }
-            
         }
-        //        .background(.cyan)
+        .padding(24)
+        .background(Color(hex: Colors.secondaryGray.value))
+        .clipShape(RoundedCorner(topLeft: topLeft,
+                                 topRight: topRight,
+                                 bottomLeft: bottomLeft,
+                                 bottomRight: bottomRight))
         
     }
     
-    
-
     func isValidPhoneNumber(_ phoneNumber: String) -> Bool {
         let phoneRegex = "^1\\d{10}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
@@ -48,22 +57,8 @@ struct TextFieldPhone: View {
 struct TextFieldPhone_Previews: PreviewProvider {
     
     static var previews: some View {
-        TextFieldPhone(phoneNumber: .constant(""))
+        TextFieldPhone(phoneNumber: .constant(""), topLeft: 8, topRight: 8, bottomLeft: 8, bottomRight: 8) { res in
+            debugPrint("phoneNumber: \(res)")
+        }
     }
 }
-
-
-//Button(action: {
-//    // 处理输入的手机号
-//    if isValidPhoneNumber(phoneNumber) {
-//        print("手机号格式正确")
-//    } else {
-//        print("手机号格式不正确")
-//    }
-//}) {
-//    Text("验证手机号")
-//        .foregroundColor(.white)
-//        .padding()
-//        .background(Color.blue)
-//        .cornerRadius(10)
-//}
