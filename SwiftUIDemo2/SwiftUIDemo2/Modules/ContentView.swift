@@ -31,7 +31,7 @@ struct ContainerView: View {
                         }
                     }
 //                    .frame(width: geometry.size.width-32, alignment: .center)
-                    .padding(EdgeInsets.init(top: 100, leading: 16, bottom: 0, trailing: 16))
+                    .padding(EdgeInsets.init(top: 130, leading: 16, bottom: 0, trailing: 16))
                     
                     VStack {
                         TextFieldCode(code: $code, title: "验证码", placeholder: "请输入验证码", topLeft: 8, topRight: 8, bottomLeft: 24, bottomRight: 24) { res in
@@ -107,5 +107,21 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+
+
+
+
+struct ContentView2: View {
+    var body: some View {
+        Text("Content View 2")
+    }
+}
+
+struct ContentView3: View {
+    var body: some View {
+        Text("Content View 3")
     }
 }

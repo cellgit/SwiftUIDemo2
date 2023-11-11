@@ -18,6 +18,10 @@
 		CE0E46922AFF4B790080EAAB /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46912AFF4B790080EAAB /* KeyboardObserver.swift */; };
 		CE0E46952AFF8FA60080EAAB /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE0E46942AFF8FA60080EAAB /* IQKeyboardManagerSwift */; };
 		CE0E46972AFF91750080EAAB /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46962AFF91750080EAAB /* KeyboardAdaptive.swift */; };
+		CE0E469A2AFFB4660080EAAB /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46992AFFB4660080EAAB /* CustomTabBarView.swift */; };
+		CE0E469D2AFFC82E0080EAAB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E469C2AFFC82E0080EAAB /* HomeView.swift */; };
+		CE0E469F2AFFC83E0080EAAB /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E469E2AFFC83E0080EAAB /* FavoritesView.swift */; };
+		CE0E46A12AFFC8470080EAAB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46A02AFFC8470080EAAB /* SettingsView.swift */; };
 		CE1297522AFB2F0400333495 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1297512AFB2F0400333495 /* ColorUtils.swift */; };
 		CE798B762AFB68C200530A8C /* TextFieldPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B752AFB68C200530A8C /* TextFieldPhone.swift */; };
 		CE798B792AFB895700530A8C /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B782AFB895700530A8C /* CountdownTimerView.swift */; };
@@ -57,6 +61,10 @@
 		CE0E46842AFA840C0080EAAB /* SwiftUIDemo2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemo2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE0E46912AFF4B790080EAAB /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		CE0E46962AFF91750080EAAB /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
+		CE0E46992AFFB4660080EAAB /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		CE0E469C2AFFC82E0080EAAB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE0E469E2AFFC83E0080EAAB /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		CE0E46A02AFFC8470080EAAB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CE1297512AFB2F0400333495 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		CE798B752AFB68C200530A8C /* TextFieldPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPhone.swift; sourceTree = "<group>"; };
 		CE798B782AFB895700530A8C /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
@@ -113,8 +121,9 @@
 		CE0E46652AFA840A0080EAAB /* SwiftUIDemo2 */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E46982AFFB45D0080EAAB /* TabBar */,
+				CE0E469B2AFFC8100080EAAB /* Modules */,
 				CE0E46662AFA840A0080EAAB /* SwiftUIDemo2App.swift */,
-				CE0E46682AFA840A0080EAAB /* ContentView.swift */,
 				CE798B752AFB68C200530A8C /* TextFieldPhone.swift */,
 				CE798B7A2AFB94C400530A8C /* TextFieldCode.swift */,
 				CEBFCEF92AFC7B9D00275624 /* TextFieldPassword.swift */,
@@ -150,6 +159,25 @@
 				CE0E46842AFA840C0080EAAB /* SwiftUIDemo2UITestsLaunchTests.swift */,
 			);
 			path = SwiftUIDemo2UITests;
+			sourceTree = "<group>";
+		};
+		CE0E46982AFFB45D0080EAAB /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E46992AFFB4660080EAAB /* CustomTabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE0E469B2AFFC8100080EAAB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E46682AFA840A0080EAAB /* ContentView.swift */,
+				CE0E469C2AFFC82E0080EAAB /* HomeView.swift */,
+				CE0E469E2AFFC83E0080EAAB /* FavoritesView.swift */,
+				CE0E46A02AFFC8470080EAAB /* SettingsView.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		CE1297502AFB2EDE00333495 /* utils */ = {
@@ -309,14 +337,18 @@
 			files = (
 				CE0E46972AFF91750080EAAB /* KeyboardAdaptive.swift in Sources */,
 				CE09C2D82AFC802800343922 /* RoundedCorner.swift in Sources */,
+				CE0E469F2AFFC83E0080EAAB /* FavoritesView.swift in Sources */,
 				CE1297522AFB2F0400333495 /* ColorUtils.swift in Sources */,
 				CE0E46692AFA840A0080EAAB /* ContentView.swift in Sources */,
 				CE0E46922AFF4B790080EAAB /* KeyboardObserver.swift in Sources */,
 				CE798B7B2AFB94C400530A8C /* TextFieldCode.swift in Sources */,
+				CE0E46A12AFFC8470080EAAB /* SettingsView.swift in Sources */,
 				CE798B762AFB68C200530A8C /* TextFieldPhone.swift in Sources */,
 				CE0E46672AFA840A0080EAAB /* SwiftUIDemo2App.swift in Sources */,
 				CEBFCEFA2AFC7B9D00275624 /* TextFieldPassword.swift in Sources */,
+				CE0E469D2AFFC82E0080EAAB /* HomeView.swift in Sources */,
 				CE798B792AFB895700530A8C /* CountdownTimerView.swift in Sources */,
+				CE0E469A2AFFB4660080EAAB /* CustomTabBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
