@@ -15,6 +15,9 @@
 		CE0E46792AFA840C0080EAAB /* SwiftUIDemo2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46782AFA840C0080EAAB /* SwiftUIDemo2Tests.swift */; };
 		CE0E46832AFA840C0080EAAB /* SwiftUIDemo2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46822AFA840C0080EAAB /* SwiftUIDemo2UITests.swift */; };
 		CE0E46852AFA840C0080EAAB /* SwiftUIDemo2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46842AFA840C0080EAAB /* SwiftUIDemo2UITestsLaunchTests.swift */; };
+		CE0E46922AFF4B790080EAAB /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46912AFF4B790080EAAB /* KeyboardObserver.swift */; };
+		CE0E46952AFF8FA60080EAAB /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE0E46942AFF8FA60080EAAB /* IQKeyboardManagerSwift */; };
+		CE0E46972AFF91750080EAAB /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E46962AFF91750080EAAB /* KeyboardAdaptive.swift */; };
 		CE1297522AFB2F0400333495 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1297512AFB2F0400333495 /* ColorUtils.swift */; };
 		CE798B762AFB68C200530A8C /* TextFieldPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B752AFB68C200530A8C /* TextFieldPhone.swift */; };
 		CE798B792AFB895700530A8C /* CountdownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE798B782AFB895700530A8C /* CountdownTimerView.swift */; };
@@ -52,6 +55,8 @@
 		CE0E467E2AFA840C0080EAAB /* SwiftUIDemo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDemo2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0E46822AFA840C0080EAAB /* SwiftUIDemo2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemo2UITests.swift; sourceTree = "<group>"; };
 		CE0E46842AFA840C0080EAAB /* SwiftUIDemo2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemo2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE0E46912AFF4B790080EAAB /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		CE0E46962AFF91750080EAAB /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
 		CE1297512AFB2F0400333495 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		CE798B752AFB68C200530A8C /* TextFieldPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPhone.swift; sourceTree = "<group>"; };
 		CE798B782AFB895700530A8C /* CountdownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerView.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0E46952AFF8FA60080EAAB /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +157,8 @@
 			children = (
 				CE1297512AFB2F0400333495 /* ColorUtils.swift */,
 				CE09C2D72AFC802800343922 /* RoundedCorner.swift */,
+				CE0E46912AFF4B790080EAAB /* KeyboardObserver.swift */,
+				CE0E46962AFF91750080EAAB /* KeyboardAdaptive.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -179,6 +187,9 @@
 			dependencies = (
 			);
 			name = SwiftUIDemo2;
+			packageProductDependencies = (
+				CE0E46942AFF8FA60080EAAB /* IQKeyboardManagerSwift */,
+			);
 			productName = SwiftUIDemo2;
 			productReference = CE0E46632AFA840A0080EAAB /* SwiftUIDemo2.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +262,9 @@
 				Base,
 			);
 			mainGroup = CE0E465A2AFA840A0080EAAB;
+			packageReferences = (
+				CE0E46932AFF8FA60080EAAB /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = CE0E46642AFA840A0080EAAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,9 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0E46972AFF91750080EAAB /* KeyboardAdaptive.swift in Sources */,
 				CE09C2D82AFC802800343922 /* RoundedCorner.swift in Sources */,
 				CE1297522AFB2F0400333495 /* ColorUtils.swift in Sources */,
 				CE0E46692AFA840A0080EAAB /* ContentView.swift in Sources */,
+				CE0E46922AFF4B790080EAAB /* KeyboardObserver.swift in Sources */,
 				CE798B7B2AFB94C400530A8C /* TextFieldCode.swift in Sources */,
 				CE798B762AFB68C200530A8C /* TextFieldPhone.swift in Sources */,
 				CE0E46672AFA840A0080EAAB /* SwiftUIDemo2App.swift in Sources */,
@@ -660,6 +676,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE0E46932AFF8FA60080EAAB /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE0E46942AFF8FA60080EAAB /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0E46932AFF8FA60080EAAB /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE0E465B2AFA840A0080EAAB /* Project object */;
 }

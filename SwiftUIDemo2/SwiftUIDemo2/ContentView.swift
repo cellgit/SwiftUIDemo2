@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import IQKeyboardManagerSwift
 
 struct ContainerView: View {
     @State private var password: String = ""
@@ -58,14 +59,37 @@ struct ContainerView: View {
                     
                 }
                 .padding(EdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                
 //                .background(Color(.gray))
                 
                 
+                
             }
+            .onTapGesture {
+                print("onTapGesture")
+                // 点击视图时收起键盘
+                KeyboardObserver.shared.hideKeyboard()
+            }
+            .onAppear {
+                print("onAppear")
+                // 注册键盘观察器
+                KeyboardObserver.shared.addObserver()
+            }
+            .onDisappear {
+                print("onAppear")
+                // 在视图消失时取消注册键盘观察器
+                KeyboardObserver.shared.removeObserver()
+            }
+            .background(IQKeyboardManagerSwiftWrapper())
+            
+            
+            
         }
         
         
     }
+        
+        
         
 }
 
@@ -76,6 +100,7 @@ struct ContentView: View {
             ContainerView()
         }
         .edgesIgnoringSafeArea(.all)
+//
     }
 }
 
